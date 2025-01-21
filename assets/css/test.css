@@ -1,0 +1,217 @@
+:root { 
+    --background-color: #fefae0; /* Soft creamy yellow for a warm and vibrant base */
+    --default-color: #2d2a32; /* Deep neutral gray for text, ensuring readability */
+    --heading-color: #0d3b66; /* Strong navy blue for bold, eye-catching headings */
+    --accent-color: #2ebf91; /* Bright and vibrant teal-green for energetic accents */
+    --surface-color: #ffffff; /* Crisp white for contrast in card backgrounds and boxes */
+    --contrast-color: #ffffff; /* White for text on vibrant backgrounds */
+  }
+  
+  /* Nav Menu Colors */
+  :root {
+    --nav-color: #2d2a32;  /* Matches default text color for harmony */
+    --nav-hover-color: #2ebf91; /* Vibrant teal-green for hover effects */
+    --nav-mobile-background-color: #fefae0; /* Matches the global background for seamless design */
+    --nav-dropdown-background-color: #ffffff; /* Bright white for clarity in dropdowns */
+    --nav-dropdown-color: #2d2a32; /* Neutral gray for dropdown text */
+    --nav-dropdown-hover-color: #2ebf91; /* Bright green hover effect for dropdown items */
+  }
+  
+  /* Color Presets */
+  .light-background {
+    --background-color: #e8f5e9; /* Soft mint green for lighter sections with vibrancy */
+    --surface-color: #ffffff; /* White for boxed elements */
+  }
+  
+  .dark-background {
+    --background-color: #0d3b66; /* Rich navy blue for dramatic dark sections */
+    --default-color: #fefae0; /* Light creamy yellow for text on dark backgrounds */
+    --heading-color: #ffffff; /* Crisp white for bold headings on dark sections */
+    --surface-color: #14213d; /* Deep steel blue for cards or separators */
+    --contrast-color: #ffffff; /* White for text on contrast-heavy elements */
+  }
+
+
+/* Orange */
+
+  :root { 
+    --background-color: #fefae0; /* Soft creamy yellow for a warm and vibrant base */
+    --default-color: #2d2a32; /* Deep neutral gray for text, ensuring readability */
+    --heading-color: #0d3b66; /* Strong navy blue for bold, eye-catching headings */
+    --accent-color: #f95738; /* Bright, fiery orange-red for vibrant accent elements */
+    --surface-color: #ffffff; /* Crisp white for contrast in card backgrounds and boxes */
+    --contrast-color: #ffffff; /* White for text on vibrant backgrounds */
+  }
+  
+  /* Nav Menu Colors */
+  :root {
+    --nav-color: #2d2a32;  /* Matches default text color for harmony */
+    --nav-hover-color: #f95738; /* Vibrant orange-red for hover effects */
+    --nav-mobile-background-color: #fefae0; /* Matches the global background for seamless design */
+    --nav-dropdown-background-color: #ffffff; /* Bright white for clarity in dropdowns */
+    --nav-dropdown-color: #2d2a32; /* Neutral gray for dropdown text */
+    --nav-dropdown-hover-color: #f95738; /* Bright hover effect for dropdown items */
+  }
+  
+  /* Color Presets */
+  .light-background {
+    --background-color: #ffeadb; /* Soft peach tone for lighter sections with vibrancy */
+    --surface-color: #ffffff; /* White for boxed elements */
+  }
+  
+  .dark-background {
+    --background-color: #0d3b66; /* Rich navy blue for dramatic dark sections */
+    --default-color: #fefae0; /* Light creamy yellow for text on dark backgrounds */
+    --heading-color: #ffffff; /* Crisp white for bold headings on dark sections */
+    --surface-color: #14213d; /* Deep steel blue for cards or separators */
+    --contrast-color: #ffffff; /* White for text on contrast-heavy elements */
+  }
+
+
+
+  /* blue */
+
+
+  :root { 
+    --background-color: #edf6f9; /* Soft aqua tint for a calm and fresh background */
+    --default-color: #2c3e50; /* Cool dark gray-blue for text to maintain readability */
+    --heading-color: #1a374d; /* Rich, deep blue-green for headings for a sophisticated touch */
+    --accent-color: #38bdf8; /* Vibrant cool sky blue for accents like buttons and links */
+    --surface-color: #ffffff; /* Pure white for card backgrounds and visual separation */
+    --contrast-color: #ffffff; /* White for text on dark or accent-colored elements */
+  }
+  
+  /* Nav Menu Colors */
+  :root {
+    --nav-color: #2c3e50;  /* Same as default text color for cohesion */
+    --nav-hover-color: #38bdf8; /* Cool accent blue for hover effects */
+    --nav-mobile-background-color: #edf6f9; /* Matches the global background for seamless mobile menus */
+    --nav-dropdown-background-color: #ffffff; /* White for dropdown menus for clarity */
+    --nav-dropdown-color: #2c3e50; /* Consistent text color for dropdown items */
+    --nav-dropdown-hover-color: #38bdf8; /* Blue hover effect for dropdown items */
+  }
+  
+  /* Color Presets */
+  .light-background {
+    --background-color: #e6f7ff; /* Very light sky blue for sections needing a softer look */
+    --surface-color: #ffffff; /* White for boxed elements */
+  }
+  
+  .dark-background {
+    --background-color: #1a374d; /* Deep blue-green for a striking cool-toned dark theme */
+    --default-color: #d4f1f4; /* Soft icy blue for text on dark backgrounds */
+    --heading-color: #ffffff; /* Crisp white for headings on dark sections */
+    --surface-color: #406882; /* Mid-tone blue for cards or separation on dark sections */
+    --contrast-color: #ffffff; /* White for text on high-contrast elements */
+  }
+
+
+  /* Orangev2  */
+
+  :root { 
+    --background-color: #f9f9f9; /* Soft light gray for a neutral and modern feel */
+    --default-color: #333333; /* Slightly darker gray for better text readability */
+    --heading-color: #1a1a1a; /* Darker shade for a bold and clear look for headings */
+    --accent-color: #ff6f61; /* A vibrant coral shade for accent elements to grab attention */
+    --surface-color: #ffffff; /* Crisp white for card backgrounds and boxed elements */
+    --contrast-color: #ffffff; /* White for text against vibrant backgrounds */
+  }
+  
+  /* Nav Menu Colors */
+  :root {
+    --nav-color: #333333;  /* Matches the text color for cohesion */
+    --nav-hover-color: #ff6f61; /* Coral accent color for hover effects */
+    --nav-mobile-background-color: #ffffff; /* White for simplicity on mobile */
+    --nav-dropdown-background-color: #f9f9f9; /* Matches the global background for seamless dropdowns */
+    --nav-dropdown-color: #333333; /* Consistent text color for dropdown items */
+    --nav-dropdown-hover-color: #ff6f61; /* Vibrant hover effect for dropdowns */
+  }
+  
+  /* Color Presets */
+  .light-background {
+    --background-color: #fefefe; /* Ultra-light shade for sections needing extra brightness */
+    --surface-color: #ffffff;
+  }
+  
+  .dark-background {
+    --background-color: #212121; /* Deep charcoal for a striking dark theme */
+    --default-color: #e0e0e0; /* Light gray text for readability on dark backgrounds */
+    --heading-color: #ffffff; /* Bright white for headings on dark sections */
+    --surface-color: #383838; /* Darker gray for cards and separation on dark sections */
+    --contrast-color: #ffffff; /* White for text on contrasting elements */
+  }
+
+
+  /* Orange v3 */
+
+  :root { 
+    --background-color: #f9f9fb; /* Light and subtle background for a modern look */
+    --default-color: #333333; /* A slightly darker default color for better text readability */
+    --heading-color: #1a1a1a; /* Strong, dark heading color for clear visual hierarchy */
+    --accent-color: #ff5722; /* Vibrant accent color for an engaging and energetic touch */
+    --surface-color: #ffffff; /* Clean white surface for card-like elements */
+    --contrast-color: #ffffff; /* Contrast color for text over darker backgrounds */
+  }
+  
+  /* Nav Menu Colors */
+  :root {
+    --nav-color: #333333;  /* Slightly darker navigation text color for readability */
+    --nav-hover-color: #ff5722; /* Matches the accent color for a cohesive design */
+    --nav-mobile-background-color: #ffffff; /* Neutral white for mobile menus */
+    --nav-dropdown-background-color: #f9f9fb; /* Soft dropdown background */
+    --nav-dropdown-color: #333333; /* Clear and readable text for dropdown items */
+    --nav-dropdown-hover-color: #ff5722; /* Accent color for interactive elements */
+  }
+  
+  /* Color Presets for Alternate Sections */
+  .light-background {
+    --background-color: #e8f4f8; /* Calming light blue for alternate sections */
+    --surface-color: #ffffff; /* Clean, white cards within the section */
+  }
+  
+  .dark-background {
+    --background-color: #212121; /* Deep charcoal for a dramatic effect */
+    --default-color: #e0e0e0; /* Softer text color against the dark background */
+    --heading-color: #ffffff; /* Bright white for headings to stand out */
+    --surface-color: #424242; /* Dark grey for cards within the dark section */
+    --contrast-color: #ffffff; /* Contrast text color for readability */
+  }
+
+
+
+
+
+  /* Old */
+  :root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #346edb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #444444;  /* The default color of the main navmenu links */
+    --nav-hover-color: #346edb; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #346edb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  
+  /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+  
+  .light-background {
+    --background-color: #f4fafd;
+    --surface-color: #ffffff;
+  }
+  
+  .dark-background {
+    --background-color: #060606;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #252525;
+    --contrast-color: #ffffff;
+  }
