@@ -12,8 +12,8 @@
 :root { 
   --background-color: #1a1d23;
   --default-color: #f0f0f0;
-  --heading-color: #61dafb;
-  --accent-color: #61dafb;
+  --heading-color: #0386aa;
+  --accent-color: #0386aa;
   --surface-color: #2c313a;
   --contrast-color: #ffffff;
 }
@@ -21,11 +21,11 @@
 /* Nav Menu Colors */
 :root {
   --nav-color: #ffffff;  /* White text */
-  --nav-hover-color: #61dafb; /* React blue on hover */
+  --nav-hover-color: #0386aa; /* React blue on hover */
   --nav-mobile-background-color: #282c34; /* Match global background */
   --nav-dropdown-background-color: #3a3f47; /* Use surface color for dropdowns */
   --nav-dropdown-color: #ffffff; /* White text */
-  --nav-dropdown-hover-color: #61dafb; /* React blue on hover */
+  --nav-dropdown-hover-color: #0386aa; /* React blue on hover */
 }
 
 /* Color Presets */
@@ -37,7 +37,7 @@
 .dark-background {
   --background-color: #282c34; /* Dark gray background */
   --default-color: #cccccc; /* Light gray text */
-  --heading-color: #61dafb; /* React blue headings */
+  --heading-color: #0386aa; /* React blue headings */
   --surface-color: #3a3f47; /* Slightly lighter dark gray for elements */
   --contrast-color: #ffffff; /* White for contrast */
 }
