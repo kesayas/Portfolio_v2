@@ -1,14 +1,4 @@
-/**
-* Template Name: Vesperr
-* Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
@@ -18,41 +8,39 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+
 :root { 
-  --background-color: #fefae0; /* Soft creamy yellow for a warm and vibrant base */
-  --default-color: #2d2a32; /* Deep neutral gray for text, ensuring readability */
-  --heading-color: #0d3b66; /* Strong navy blue for bold, eye-catching headings */
-  --accent-color: #2ebf91; /* Bright and vibrant teal-green for energetic accents */
-  --surface-color: #ffffff; /* Crisp white for contrast in card backgrounds and boxes */
-  --contrast-color: #ffffff; /* White for text on vibrant backgrounds */
+  --background-color: #1a1d23;
+  --default-color: #f0f0f0;
+  --heading-color: #61dafb;
+  --accent-color: #61dafb;
+  --surface-color: #2c313a;
+  --contrast-color: #ffffff;
 }
 
 /* Nav Menu Colors */
 :root {
-  --nav-color: #2d2a32;  /* Matches default text color for harmony */
-  --nav-hover-color: #2ebf91; /* Vibrant teal-green for hover effects */
-  --nav-mobile-background-color: #fefae0; /* Matches the global background for seamless design */
-  --nav-dropdown-background-color: #ffffff; /* Bright white for clarity in dropdowns */
-  --nav-dropdown-color: #2d2a32; /* Neutral gray for dropdown text */
-  --nav-dropdown-hover-color: #2ebf91; /* Bright green hover effect for dropdown items */
+  --nav-color: #ffffff;  /* White text */
+  --nav-hover-color: #61dafb; /* React blue on hover */
+  --nav-mobile-background-color: #282c34; /* Match global background */
+  --nav-dropdown-background-color: #3a3f47; /* Use surface color for dropdowns */
+  --nav-dropdown-color: #ffffff; /* White text */
+  --nav-dropdown-hover-color: #61dafb; /* React blue on hover */
 }
 
 /* Color Presets */
 .light-background {
-  --background-color: #e8f5e9; /* Soft mint green for lighter sections with vibrancy */
+  --background-color: #f7f7f7; /* Light gray background */
   --surface-color: #ffffff; /* White for boxed elements */
 }
 
 .dark-background {
-  --background-color: #0d3b66; /* Rich navy blue for dramatic dark sections */
-  --default-color: #fefae0; /* Light creamy yellow for text on dark backgrounds */
-  --heading-color: #ffffff; /* Crisp white for bold headings on dark sections */
-  --surface-color: #14213d; /* Deep steel blue for cards or separators */
-  --contrast-color: #ffffff; /* White for text on contrast-heavy elements */
+  --background-color: #282c34; /* Dark gray background */
+  --default-color: #cccccc; /* Light gray text */
+  --heading-color: #61dafb; /* React blue headings */
+  --surface-color: #3a3f47; /* Slightly lighter dark gray for elements */
+  --contrast-color: #ffffff; /* White for contrast */
 }
-
-
-
 
 /* Smooth scroll */
 :root {
@@ -62,7 +50,14 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
 body {
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
@@ -71,7 +66,7 @@ body {
 a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
@@ -85,6 +80,7 @@ h3,
 h4,
 h5,
 h6 {
+  margin-bottom: 0.5rem;
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
@@ -684,21 +680,23 @@ section,
   font-weight: 400;
 }
 
+
 .hero .btn-get-started {
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 10px 36px;
-  border-radius: 50px;
-  transition: 0.3s;
-  border: 2px solid var(--accent-color);
+  padding: 12px 24px;
+  border-radius: 8px; /* Update border radius */
+  transition: background-color 0.3s ease-in-out;
+  background-color: var(--accent-color); /* Update background color */
+  color: var(--contrast-color); /* Update text color */
+  border: none; /* Remove border */
 }
 
 .hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 .hero .animated {
@@ -864,8 +862,9 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 0 30px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 10px;
   transition: all ease-in-out 0.4s;
   height: 100%;
   overflow: hidden;
@@ -1162,6 +1161,9 @@ section,
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
 .portfolio .portfolio-filters li {
