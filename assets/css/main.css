@@ -671,6 +671,8 @@ section,
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
+  opacity: 0; /* Initial state for text animation */
+  transform: scale(0.5) translateY(50px);
 }
 
 .hero p {
@@ -678,8 +680,9 @@ section,
   margin: 5px 0 20px 0;
   font-size: 22px;
   font-weight: 400;
+  opacity: 0; /* Initial state for text animation */
+  transform: scale(0.5) translateY(50px);
 }
-
 
 .hero .btn-get-started {
   font-family: var(--heading-font);
@@ -688,19 +691,79 @@ section,
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 24px;
-  border-radius: 8px; /* Update border radius */
+  border-radius: 8px;
   transition: background-color 0.3s ease-in-out;
-  background-color: var(--accent-color); /* Update background color */
-  color: var(--contrast-color); /* Update text color */
-  border: none; /* Remove border */
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  opacity: 0; /* Initial state for text animation */
+  transform: scale(0.5) translateY(50px);
 }
 
 .hero .btn-get-started:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-.hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+/* Terminal Animation Styles */
+.hero-terminal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal-window {
+  background-color: #1e2229; /* Dark terminal background */
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Initial state for animation */
+  transform: scale(0.8); /* Start slightly smaller */
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 10px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.terminal-dot.red { background-color: #ff5f56; }
+.terminal-dot.yellow { background-color: #ffbd2e; }
+.terminal-dot.green { background-color: #27c93f; }
+
+.terminal-body {
+  padding: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #00ff00; /* Classic terminal green */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.terminal-prompt {
+  color: #00ff00;
+}
+
+.terminal-text {
+  color: #ffffff;
+}
+
+.terminal-cursor {
+  color: #00ff00;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -715,22 +778,15 @@ section,
     margin-bottom: 30px;
   }
 
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
+  .hero .btn-get-started {
     font-size: 13px;
   }
-}
 
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
+  .terminal-window {
+    width: 100%;
+    max-width: 300px;
   }
 }
-
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/

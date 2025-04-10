@@ -1,10 +1,10 @@
 /**
- * Template Name: Vesperr
- * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
- * Updated: Aug 07 2024 with Bootstrap v5.3.3
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
+* Template Name: Vesperr
+* Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+* Updated: Aug 07 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
 (function() {
   "use strict";
@@ -43,6 +43,7 @@
         mobileNavToogle();
       }
     });
+
   });
 
   /**
@@ -162,6 +163,7 @@
         }
       }, false);
     });
+
   });
 
   /**
@@ -199,97 +201,11 @@
       } else {
         navmenulink.classList.remove('active');
       }
-    });
+    })
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  /**
-   * Hero Section Animation with Anime.js
-   */
-  function initHeroAnimation() {
-    // Animate the text content
-    anime({
-      targets: '.hero h1',
-      opacity: [0, 1],
-      scale: [
-        { value: 0.5, easing: 'easeOutSine', duration: 400 },
-        { value: 1.1, easing: 'easeInOutQuad', duration: 300 },
-        { value: 0.95, easing: 'easeInOutQuad', duration: 300 },
-        { value: 1, easing: 'easeInOutQuad', duration: 300 }
-      ],
-      translateY: [
-        { value: 50, easing: 'easeOutSine', duration: 400 },
-        { value: 0, easing: 'easeInOutQuad', duration: 600 }
-      ],
-      easing: 'easeOutElastic(1, .8)',
-      duration: 1500,
-      delay: 200
-    });
-
-    anime({
-      targets: '.hero p',
-      opacity: [0, 1],
-      scale: [
-        { value: 0.5, easing: 'easeOutSine', duration: 400 },
-        { value: 1.1, easing: 'easeInOutQuad', duration: 300 },
-        { value: 0.95, easing: 'easeInOutQuad', duration: 300 },
-        { value: 1, easing: 'easeInOutQuad', duration: 300 }
-      ],
-      translateY: [
-        { value: 50, easing: 'easeOutSine', duration: 400 },
-        { value: 0, easing: 'easeInOutQuad', duration: 600 }
-      ],
-      easing: 'easeOutElastic(1, .8)',
-      duration: 1500,
-      delay: 400
-    });
-
-    anime({
-      targets: '.hero .btn-get-started',
-      opacity: [0, 1],
-      scale: [
-        { value: 0.5, easing: 'easeOutSine', duration: 400 },
-        { value: 1.1, easing: 'easeInOutQuad', duration: 300 },
-        { value: 0.95, easing: 'easeInOutQuad', duration: 300 },
-        { value: 1, easing: 'easeInOutQuad', duration: 300 }
-      ],
-      translateY: [
-        { value: 50, easing: 'easeOutSine', duration: 400 },
-        { value: 0, easing: 'easeInOutQuad', duration: 600 }
-      ],
-      easing: 'easeOutElastic(1, .8)',
-      duration: 1500,
-      delay: 600
-    });
-
-    // Animate the terminal window
-    anime({
-      targets: '.terminal-window',
-      opacity: [0, 1],
-      scale: [0.8, 1],
-      duration: 1000,
-      easing: 'easeOutQuad',
-      delay: 200
-    });
-
-    // Typing animation for terminal text
-    const terminalText = document.querySelector('.terminal-text');
-    const textToType = 'Kirubel@portfolio:~$ whoami\nSoftware Developer';
-    terminalText.textContent = ''; // Start empty
-
-    anime({
-      targets: terminalText,
-      duration: 3000,
-      easing: 'linear',
-      delay: 1200, // Start after terminal fades in
-      update: function(anim) {
-        const progress = Math.round(anim.progress * textToType.length / 100);
-        terminalText.textContent = textToType.substring(0, progress);
-      }
-    });
-  }
-
-  window.addEventListener('load', initHeroAnimation);
-
 })();
+
+
