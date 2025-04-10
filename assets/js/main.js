@@ -1,10 +1,4 @@
-/**
- * Template Name: Vesperr
- * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
- * Updated: Aug 07 2024 with Bootstrap v5.3.3
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
+
 
 (function() {
   "use strict";
@@ -292,4 +286,356 @@
 
   window.addEventListener('load', initHeroAnimation);
 
+  /**
+ * Stats Section Animation with Anime.js
+ */
+function initStatsAnimation() {
+  // Animate the terminal window
+  anime({
+    targets: '.stats .terminal-stats',
+    opacity: [0, 1],
+    scale: [0.8, 1],
+    duration: 1000,
+    easing: 'easeOutQuad',
+    delay: 200
+  });
+
+  // Sync terminal stats with PureCounter
+  const statsValues = document.querySelectorAll('.stats-value');
+  const counters = document.querySelectorAll('.stats-counter');
+  
+  counters.forEach((counter, index) => {
+    counter.addEventListener('purecounter-updated', () => {
+      const value = counter.textContent;
+      anime({
+        targets: statsValues[index],
+        innerHTML: [statsValues[index].textContent, value],
+        easing: 'easeOutQuad',
+        duration: 500,
+        round: 1 // Ensure whole numbers
+      });
+    });
+  });
+
+  // Add glitch effect to counters on hover
+  document.querySelectorAll('.stats-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const counter = item.querySelector('.stats-counter');
+      counter.classList.add('glitch');
+      setTimeout(() => counter.classList.remove('glitch'), 300);
+    });
+  });
+}
+
+window.addEventListener('load', initStatsAnimation);
+/**
+ * Services Section Animation with Anime.js
+ */
+function initServicesAnimation() {
+  document.querySelectorAll('.service-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      // Ripple effect on icon
+      anime({
+        targets: item.querySelector('i'),
+        scale: [1, 1.2, 1],
+        duration: 600,
+        easing: 'easeInOutQuad'
+      });
+
+      // Typing effect for service-code
+      const codeElement = item.querySelector('.service-code pre');
+      const codeText = codeElement.textContent;
+      codeElement.textContent = ''; // Clear initially
+
+      anime({
+        targets: codeElement,
+        duration: codeText.length * 50, // 50ms per character
+        easing: 'linear',
+        update: function(anim) {
+          const progress = Math.round(anim.progress * codeText.length / 100);
+          codeElement.textContent = codeText.substring(0, progress);
+        }
+      });
+    });
+
+    // Reset on mouse leave
+    item.addEventListener('mouseleave', () => {
+      const codeElement = item.querySelector('.service-code pre');
+      codeElement.textContent = codeElement.textContent; // Keep final text
+    });
+  });
+}
+
+window.addEventListener('load', initServicesAnimation);
+
+/**
+ * Features Section Animation with Anime.js
+ */
+function initFeaturesAnimation() {
+  document.querySelectorAll('.features-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      // Pulse animation for icon
+      anime({
+        targets: item.querySelector('i'),
+        scale: [1, 1.2, 1],
+        duration: 600,
+        easing: 'easeInOutQuad'
+      });
+
+      // Fade-in animation for description
+      const descElement = item.querySelector('.feature-desc');
+      anime({
+        targets: descElement,
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 300,
+        easing: 'easeOutQuad'
+      });
+    });
+
+    item.addEventListener('mouseleave', () => {
+      // Reset description position
+      const descElement = item.querySelector('.feature-desc');
+      anime({
+        targets: descElement,
+        opacity: [1, 0],
+        translateY: [0, 20],
+        duration: 300,
+        easing: 'easeInQuad'
+      });
+    });
+  });
+}
+
+window.addEventListener('load', initFeaturesAnimation);
+/**
+ * Portfolio Section Animation with Anime.js
+ */
+function initPortfolioAnimation() {
+  document.querySelectorAll('.portfolio-content').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      // Glitch effect for image
+      anime({
+        targets: item.querySelector('img'),
+        translateX: [
+          { value: 5, duration: 50 },
+          { value: -5, duration: 50 },
+          { value: 3, duration: 50 },
+          { value: 0, duration: 50 }
+        ],
+        easing: 'easeInOutSine',
+        duration: 200
+      });
+
+      // Typing effect for portfolio-code
+      const codeElement = item.querySelector('.portfolio-code pre');
+      const codeText = codeElement.textContent;
+      codeElement.textContent = ''; // Clear initially
+
+      anime({
+        targets: codeElement,
+        duration: codeText.length * 50, // 50ms per character
+        easing: 'linear',
+        update: function(anim) {
+          const progress = Math.round(anim.progress * codeText.length / 100);
+          codeElement.textContent = codeText.substring(0, progress);
+        }
+      });
+    });
+
+    // Reset on mouse leave
+    item.addEventListener('mouseleave', () => {
+      const codeElement = item.querySelector('.portfolio-code pre');
+      codeElement.textContent = codeElement.textContent; // Keep final text
+    });
+  });
+}
+
+window.addEventListener('load', initPortfolioAnimation);
+/**
+ * Contact Section Animation with Anime.js
+ */
+function initContactAnimation() {
+  // Animate form inputs on focus
+  document.querySelectorAll('.php-email-form .form-control').forEach(input => {
+    input.addEventListener('focus', () => {
+      anime({
+        targets: input,
+        scale: [1, 1.02],
+        duration: 300,
+        easing: 'easeOutQuad'
+      });
+    });
+    input.addEventListener('blur', () => {
+      anime({
+        targets: input,
+        scale: [1.02, 1],
+        duration: 300,
+        easing: 'easeInQuad'
+      });
+    });
+  });
+
+  // Animate form submission
+  const form = document.querySelector('.php-email-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Remove this if your form submits via PHP
+    form.classList.add('loading');
+
+    // Simulate processing with terminal-style dots
+    const loadingText = form.querySelector('.loading');
+    let dots = 0;
+    const dotAnimation = setInterval(() => {
+      dots = (dots + 1) % 4;
+      loadingText.textContent = `Processing${'.'.repeat(dots)}`;
+    }, 300);
+
+    // Simulate success after 2 seconds (replace with actual form logic)
+    setTimeout(() => {
+      clearInterval(dotAnimation);
+      form.classList.remove('loading');
+      form.classList.add('sent');
+      setTimeout(() => form.classList.remove('sent'), 3000); // Hide message after 3s
+    }, 2000);
+  });
+}
+
+window.addEventListener('load', initContactAnimation);
+/**
+ * Header Animation with Anime.js
+ */
+function initHeaderAnimation() {
+  // Animate nav links on hover
+  document.querySelectorAll('.navmenu .nav-link').forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      anime({
+        targets: link,
+        scale: [1, 1.05],
+        duration: 300,
+        easing: 'easeOutQuad',
+        color: '#0386aa' // Your accent color
+      });
+    });
+    link.addEventListener('mouseleave', () => {
+      anime({
+        targets: link,
+        scale: [1.05, 1],
+        duration: 300,
+        easing: 'easeInQuad',
+        color: getComputedStyle(link).color // Reset to original
+      });
+    });
+  });
+
+  // Mobile nav toggle animation
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  const navmenu = document.querySelector('#navmenu');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navmenu.classList.toggle('active');
+
+    if (navmenu.classList.contains('active')) {
+      anime({
+        targets: navmenu,
+        opacity: [0, 1],
+        translateY: [-20, 0],
+        duration: 300,
+        easing: 'easeOutQuad'
+      });
+    } else {
+      anime({
+        targets: navmenu,
+        opacity: [1, 0],
+        translateY: [0, -20],
+        duration: 300,
+        easing: 'easeInQuad',
+        complete: () => navmenu.style.display = 'none' // Reset display after animation
+      });
+    }
+  });
+
+  // Ensure navmenu is hidden on load for mobile
+  if (window.innerWidth <= 991) {
+    navmenu.style.display = 'none';
+  }
+}
+
+window.addEventListener('load', initHeaderAnimation);
+
+/**
+ * Footer Animation and Dynamic Year with Anime.js
+ */
+function initFooterAnimation() {
+  // Set current year
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  // Animate terminal text on load
+  const terminalText = document.querySelector('.terminal-text');
+  const prompt = terminalText.querySelector('.prompt');
+  const command = terminalText.querySelector('.command');
+  const output = terminalText.querySelector('.output');
+
+  anime.timeline({
+    easing: 'easeOutQuad'
+  })
+    .add({
+      targets: prompt,
+      opacity: [0, 1],
+      duration: 300
+    })
+    .add({
+      targets: command,
+      opacity: [0, 1],
+      duration: 300
+    }, '-=100')
+    .add({
+      targets: output,
+      opacity: [0, 1],
+      duration: 500
+    }, '-=100');
+
+  // Animate social links on hover
+  document.querySelectorAll('.social-links a').forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      anime({
+        targets: link,
+        scale: [1, 1.1],
+        rotate: '5deg',
+        duration: 300,
+        easing: 'easeOutQuad'
+      });
+    });
+    link.addEventListener('mouseleave', () => {
+      anime({
+        targets: link,
+        scale: [1.1, 1],
+        rotate: '0deg',
+        duration: 300,
+        easing: 'easeInQuad'
+      });
+    });
+  });
+
+  // Animate credit link on hover
+  const creditLink = document.querySelector('.credits .credit-link');
+  creditLink.addEventListener('mouseenter', () => {
+    anime({
+      targets: creditLink,
+      translateX: [0, 3, -3, 2, 0], // Subtle glitch
+      duration: 400,
+      easing: 'easeInOutSine',
+      color: '#ffffff'
+    });
+  });
+  creditLink.addEventListener('mouseleave', () => {
+    anime({
+      targets: creditLink,
+      color: '#0386aa' // Reset to accent color
+    });
+  });
+}
+
+window.addEventListener('load', initFooterAnimation);
+
 })();
+

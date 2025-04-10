@@ -26,35 +26,32 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top shadow-sm p-0">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+<!-- Header -->
+<header id="header" class="header d-flex align-items-center sticky-top shadow-sm p-0">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <img src="assets/animation/Code-Animated-Icons_1.gif" class="img-fluid rounded-bottom-4 logo-img" alt="Kirubel Logo">
+      <h1 class="sitename ms-2">Kirubel</h1> <!-- Added for branding -->
+    </a>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/animation/Code-Animated-Icons_1.gif" class="img-fluid rounded-bottom-4" alt="">
-        <!-- <h1 class="sitename">Vesperr</h1> -->
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home<br></a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+  </div>
+</header><!-- /Header -->
 
   <main class="main">
 
@@ -85,45 +82,110 @@
       </div>
     </section><!-- /Hero Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
+<!-- Technologies Section -->
+<section id="technologies" class="technologies section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Technologies</h2>
+    <p>Tools and frameworks I leverage to build innovative solutions.</p>
+  </div><!-- End Section Title -->
 
-      <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2 " data-aos="fade-up">
+  <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper init-swiper technologies-slider">
+      <script type="application/json" class="swiper-config">
+        {
+          "speed": 600,
+          "autoplay": {
+            "delay": 3000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 2,
+              "spaceBetween": 20
+            },
+            "768": {
+              "slidesPerView": 3,
+              "spaceBetween": 30
+            },
+            "992": {
+              "slidesPerView": 4,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 6,
+              "spaceBetween": 40
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide technology-item">
+          <div class="technology-logo">
+            <img src="assets/icon/python-5.svg" class="img-fluid" alt="Python">
 
-        <div class="row p-0 m-0">
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/icon/python-5.svg" class="img-fluid" alt="" style="width: 130px; height: 130px;">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/icon/html-icon.svg" class="img-fluid" alt="" style="width: 130px; height: 130px;">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/icon/css-icon.svg" class="img-fluid" alt="" style="width: 130px; height: 130px;">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/icon/js-icon.svg" class="img-fluid" alt="" style="width: 130px; height: 130px;">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/icon/bootstrap-icon.svg" class="img-fluid" alt="" style="width: 130px; height: 130px;">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/icon/django.svg" class="img-fluid" alt="" style="width: 130px; height: 130px;">
+            <div class="technology-info">
+              <h4>Python</h4>
+            </div>
           </div>
+        </div><!-- End Technology Item -->
 
-          <!-- End Client Item -->
+        <div class="swiper-slide technology-item">
+          <div class="technology-logo">
+            <img src="assets/icon/html-icon.svg" class="img-fluid" alt="HTML">
 
-        </div>
+            <div class="technology-info">
+              <h4>HTML</h4>
+            </div>
+          </div>
+        </div><!-- End Technology Item -->
 
+        <div class="swiper-slide technology-item">
+          <div class="technology-logo">
+            <img src="assets/icon/css-icon.svg" class="img-fluid" alt="CSS">
+            
+            <div class="technology-info">
+              <h4>CSS</h4>
+            </div>
+          </div>
+        </div><!-- End Technology Item -->
+
+        <div class="swiper-slide technology-item">
+          <div class="technology-logo">
+            <img src="assets/icon/js-icon.svg" class="img-fluid" alt="JavaScript">
+            <div class="technology-info">
+              <h4>JavaScript</h4>
+            </div>
+          </div>
+        </div><!-- End Technology Item -->
+
+        <div class="swiper-slide technology-item">
+          <div class="technology-logo">
+            <img src="assets/icon/bootstrap-icon.svg" class="img-fluid" alt="Bootstrap">
+            <div class="technology-info">
+              <h4>Bootstrap</h4>
+            </div>
+          </div>
+        </div><!-- End Technology Item -->
+
+        <div class="swiper-slide technology-item">
+          <div class="technology-logo">
+            <img src="assets/icon/django.svg" class="img-fluid" alt="Django">
+            <div class="technology-info">
+              <h4>Django</h4>
+            </div>
+          </div>
+        </div><!-- End Technology Item -->
       </div>
-
-    </section>
-
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section><!-- /Technologies Section -->
     <!-- About Section -->
     <section id="about" class="about section">
       <!-- Section Title -->
@@ -143,7 +205,7 @@
     
           <!-- Skills and Expertise -->
           <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
+            <div class="row gy-4 d-flex">
               <div class="col-md-6 icon-box position-relative">
                 <i class="bi bi-code-slash"></i>
                 <h4>Technical Skills</h4>
@@ -181,498 +243,372 @@
       </div>
     </section><!-- /About Section -->
     
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 align-items-center">
-    
-          <div class="col-lg-5">
-            <img src="assets/img/stats-img.svg" alt="" class="img-fluid">
+   <!-- Stats Section -->
+<section id="stats" class="stats section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 align-items-center">
+      <div class="col-lg-5 stats-animation">
+        <div class="terminal-stats">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
           </div>
-    
-          <div class="col-lg-7">
-            <div class="row gy-4">
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-journal-richtext flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Projects Completed</strong> <span>Successfully delivered innovative web development projects, enhancing business presence and user engagement.</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-    
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-person-check flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Clients Served</strong> <span>Partnered with a diverse range of businesses to bring their digital visions to life.</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-    
-              <!-- <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-award flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Awards Won</strong> <span>Recognized for outstanding contributions to the field of web development and system integration.</span></p>
-                  </div>
-                </div>
-              </div> -->
-              <!-- End Stats Item -->
-    
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-clock flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Hours Spent</strong> <span>Dedicated over 1000 hours to building and optimizing web applications for diverse business needs.</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-              
-            </div>
+          <div class="terminal-body">
+            <pre class="stats-output">$ stats --kirubel
+Projects: <span class="stats-value">15</span>
+Clients: <span class="stats-value">10</span>
+Hours: <span class="stats-value">1000</span></pre>
           </div>
-    
         </div>
       </div>
-    </section><!-- End Stats Section -->
+
+      <div class="col-lg-7">
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="stats-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-journal-richtext flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter stats-counter">0</span>
+                <p><strong>Projects Completed</strong> <span>Successfully delivered innovative web development projects, enhancing business presence and user engagement.</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-person-check flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter stats-counter">0</span>
+                <p><strong>Clients Served</strong> <span>Partnered with a diverse range of businesses to bring their digital visions to life.</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-clock flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1" class="purecounter stats-counter">0</span>
+                <p><strong>Hours Spent</strong> <span>Dedicated over 1000 hours to building and optimizing web applications for diverse business needs.</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Stats Section -->
     
     <!-- Services Section -->
-    <section id="services" class="services section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Creating customized web solutions to meet your personal and business needs.</p>
-      </div><!-- End Section Title -->
-    
-      <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2">
-        <div class="row gy-4">
-          <!-- Service Item -->
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <i class="bi bi-person-badge"></i>
-              <h4><a href="" class="stretched-link">Business Website Development</a></h4>
-              <p>
-                Create professional business websites to highlight your mission, vision, services, and achievements, showcase completed projects, and feature your esteemed clients.
-              </p>
-            </div>
-          </div><!-- End Service Item -->
-    
-          <!-- Service Item -->
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <i class="bi bi-building"></i>
-              <h4><a href="" class="stretched-link">Dynamic Business Websites</a></h4>
-              <p>
-                Develop responsive and dynamic websites for businesses with features like form submission, user registration, and contact pages.
-              </p>
-            </div>
-          </div><!-- End Service Item -->
-    
-          <!-- Service Item -->
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <i class="bi bi-pencil-square"></i>
-              <h4><a href="" class="stretched-link">Blog Integration</a></h4>
-              <p>
-                Integrate blog sections for businesses and individuals to share updates, articles, and news seamlessly.
-              </p>
-            </div>
-          </div><!-- End Service Item -->
-    
-          <!-- Service Item -->
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <i class="bi bi-calendar-check"></i>
-              <h4><a href="" class="stretched-link">Online Booking Systems</a></h4>
-              <p>
-                Implement custom booking systems for services like appointments, event reservations, and more, with real-time functionality.
-              </p>
-            </div>
-          </div><!-- End Service Item -->
-        </div>
-      </div>
-    </section><!-- /Services Section -->
-    
+<section id="services" class="services section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Services</h2>
+    <p>Creating customized web solutions to meet your personal and business needs.</p>
+  </div><!-- End Section Title -->
 
-    <section id="features" class="features section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Features</h2>
-        <p>Explore the unique features that make my web solutions stand out in performance and user experience.</p>
-      </div><!-- End Section Title -->
-    
-      <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2">
-        <div class="row gy-4">
-          <!-- Feature Item -->
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="features-item">
-              <i class="bi bi-lightbulb" style="color: #ffbb2c;"></i>
-              <h3>Creative Designs</h3>
-              <!-- <p>Custom and visually appealing designs tailored to your brand identity.</p> -->
-            </div>
-          </div><!-- End Feature Item -->
-    
-          <!-- Feature Item -->
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="features-item">
-              <i class="bi bi-speedometer" style="color: #5578ff;"></i>
-              <h3>Fast Loading</h3>
-              <!-- <p>Optimized websites that ensure quick loading times for a seamless user experience.</p> -->
-            </div>
-          </div><!-- End Feature Item -->
-    
-          <!-- Feature Item -->
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="features-item">
-              <i class="bi bi-phone" style="color: #e80368;"></i>
-              <h3>Responsive Design</h3>
-              <!-- <p>Websites that look great and work smoothly on all devices and screen sizes.</p> -->
-            </div>
-          </div><!-- End Feature Item -->
-    
-          <!-- Feature Item -->
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="features-item">
-              <i class="bi bi-lock" style="color: #e361ff;"></i>
-              <h3>Enhanced Security</h3>
-              <!-- <p>Robust security measures to protect user data and prevent unauthorized access.</p> -->
-            </div>
-          </div><!-- End Feature Item -->
-    
-          <!-- Feature Item -->
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="features-item">
-              <i class="bi bi-pencil" style="color: #47aeff;"></i>
-              <h3>Easy Customization</h3>
-              <!-- <p>User-friendly interfaces and tools for easy content updates and customization.</p> -->
-            </div>
-          </div><!-- End Feature Item -->
-    
-          <!-- Feature Item -->
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="features-item">
-              <i class="bi bi-gear" style="color: #ffa76e;"></i>
-              <h3>Dynamic Functionality</h3>
-              <!-- <p>Advanced features like form submission, registration, and booking systems.</p> -->
-            </div>
-          </div><!-- End Feature Item -->
-    
-          <!-- Feature Item -->
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
-            <div class="features-item">
-              <i class="bi bi-palette" style="color: #11dbcf;"></i>
-              <h3>Custom Themes</h3>
-              <!-- <p>Unique themes designed to match your business or personal style.</p> -->
-            </div>
-          </div><!-- End Feature Item -->
-    
-          <!-- Feature Item -->
-          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
-            <div class="features-item">
-              <i class="bi bi-graph-up-arrow" style="color: #4233ff;"></i>
-              <h3>SEO Optimization</h3>
-              <!-- <p>Boost your online visibility with search engine-friendly practices and techniques.</p> -->
-            </div>
+  <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2">
+    <div class="row gy-4">
+      <!-- Service Item -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <i class="bi bi-person-badge"></i>
+          <h4><a href="" class="stretched-link">Business Website Development</a></h4>
+          <p>Create professional business websites to highlight your mission, vision, services, and achievements.</p>
+          <div class="service-code">
+            <pre>$ npm install business-site</pre>
           </div>
-          
-          <!-- End Feature Item -->
-    
         </div>
-      </div>
-    </section><!-- /Features Section -->
-    
+      </div><!-- End Service Item -->
 
+      <!-- Service Item -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <i class="bi bi-building"></i>
+          <h4><a href="" class="stretched-link">Dynamic Business Websites</a></h4>
+          <p>Develop responsive websites with features like forms, user registration, and contact pages.</p>
+          <div class="service-code">
+            <pre>$ python manage.py runserver</pre>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <i class="bi bi-pencil-square"></i>
+          <h4><a href="" class="stretched-link">Blog Integration</a></h4>
+          <p>Integrate blog sections to share updates, articles, and news seamlessly.</p>
+          <div class="service-code">
+            <pre>$ git commit -m "Add blog"</pre>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Service Item -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <i class="bi bi-calendar-check"></i>
+          <h4><a href="" class="stretched-link">Online Booking Systems</a></h4>
+          <p>Implement custom booking systems for appointments and events with real-time functionality.</p>
+          <div class="service-code">
+            <pre>$ curl -X POST /api/book</pre>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+    </div>
+  </div>
+</section><!-- /Services Section -->
+<!-- Features Section -->
+<section id="features" class="features section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Features</h2>
+    <p>Explore the unique features that make my web solutions stand out in performance and user experience.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2">
+    <div class="row gy-4">
+      <!-- Feature Item -->
+      <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="features-item">
+          <i class="bi bi-lightbulb" style="color: #ffbb2c;"></i>
+          <h3>Creative Designs</h3>
+          <p class="feature-desc">Custom and visually appealing designs tailored to your brand identity.</p>
+        </div>
+      </div><!-- End Feature Item -->
+
+      <!-- Feature Item -->
+      <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="features-item">
+          <i class="bi bi-speedometer" style="color: #5578ff;"></i>
+          <h3>Fast Loading</h3>
+          <p class="feature-desc">Optimized websites ensuring quick loading times for a seamless user experience.</p>
+        </div>
+      </div><!-- End Feature Item -->
+
+      <!-- Feature Item -->
+      <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="features-item">
+          <i class="bi bi-phone" style="color: #e80368;"></i>
+          <h3>Responsive Design</h3>
+          <p class="feature-desc">Websites that look great and work smoothly on all devices and screen sizes.</p>
+        </div>
+      </div><!-- End Feature Item -->
+
+      <!-- Feature Item -->
+      <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="features-item">
+          <i class="bi bi-lock" style="color: #e361ff;"></i>
+          <h3>Enhanced Security</h3>
+          <p class="feature-desc">Robust security measures to protect user data and prevent unauthorized access.</p>
+        </div>
+      </div><!-- End Feature Item -->
+
+      <!-- Feature Item -->
+      <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="features-item">
+          <i class="bi bi-pencil" style="color: #47aeff;"></i>
+          <h3>Easy Customization</h3>
+          <p class="feature-desc">User-friendly interfaces and tools for easy content updates and customization.</p>
+        </div>
+      </div><!-- End Feature Item -->
+
+      <!-- Feature Item -->
+      <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="features-item">
+          <i class="bi bi-gear" style="color: #ffa76e;"></i>
+          <h3>Dynamic Functionality</h3>
+          <p class="feature-desc">Advanced features like form submission, registration, and booking systems.</p>
+        </div>
+      </div><!-- End Feature Item -->
+
+      <!-- Feature Item -->
+      <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
+        <div class="features-item">
+          <i class="bi bi-palette" style="color: #11dbcf;"></i>
+          <h3>Custom Themes</h3>
+          <p class="feature-desc">Unique themes designed to match your business or personal style.</p>
+        </div>
+      </div><!-- End Feature Item -->
+
+      <!-- Feature Item -->
+      <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
+        <div class="features-item">
+          <i class="bi bi-graph-up-arrow" style="color: #4233ff;"></i>
+          <h3>SEO Optimization</h3>
+          <p class="feature-desc">Boost your online visibility with search engine-friendly practices.</p>
+        </div>
+      </div><!-- End Feature Item -->
+    </div>
+  </div>
+</section><!-- /Features Section -->
    
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Discover my diverse portfolio showcasing creativity, innovation, and expertise across various domains.</p>
+  </div><!-- End Section Title -->
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Discover my diverse portfolio showcasing creativity, innovation, and expertise across various domains.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <!-- <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul> -->
-          <!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/images/AMS.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Attendance Management System</h4>
-                  <p>The attendance management system web application is a Django and sqlite based application. There are three user type namely HOD, teachers and students.</p>
-
-                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+  <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        <!-- Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/images/AMS.png" class="img-fluid" alt="Attendance Management System">
+            <div class="portfolio-info">
+              <h4>Attendance Management System</h4>
+              <p>A Django and SQLite-based web app with roles for HOD, teachers, and students.</p>
+              <div class="portfolio-code">
+                <pre>$ python manage.py migrate</pre>
               </div>
-            </div><!-- End Portfolio Item -->
+              <a href="assets/img/portfolio/app-1.jpg" title="Attendance Management System" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clinic Management system</h4>
-                  <p>Developed an advanced Clinic Management System using Odoo 16, enhancing patient registration and identification
-                    through biometric technology.</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <!-- Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="Clinic Management System">
+            <div class="portfolio-info">
+              <h4>Clinic Management System</h4>
+              <p>Built with Odoo 16, featuring biometric patient registration.</p>
+              <div class="portfolio-code">
+                <pre>$ odoo-bin -c config.conf</pre>
               </div>
-            </div><!-- End Portfolio Item -->
+              <a href="assets/img/portfolio/product-1.jpg" title="Clinic Management System" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Jenboro Real-Estate Marketing System</h4>
-                  <p>Designed and implemented a marketing and customer management system using Odoo 15 to transform the real estate
-                    sales process.</p>
-                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+        <!-- Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="Jenboro Real-Estate Marketing System">
+            <div class="portfolio-info">
+              <h4>Jenboro Real-Estate Marketing System</h4>
+              <p>Odoo 15-based system for real estate sales and customer management.</p>
+              <div class="portfolio-code">
+                <pre>$ git push origin main</pre>
               </div>
-            </div><!-- End Portfolio Item -->
+              <a href="assets/img/portfolio/branding-1.jpg" title="Jenboro Real-Estate Marketing System" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>RHA ERP System Development</h4>
-                  <p>Designed and implemented a custom ERP module tailored to the business requirements of RHA Solutions, leveraging
-                    Odoo to optimize recruitment, shift management, performance tracking, attendance, and payroll processes.</p>
-                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Black Phoenix Website</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
+        <!-- Add more items as needed -->
+      </div><!-- End Portfolio Container -->
+    </div>
+  </div>
+</section><!-- /Portfolio Section -->
 
     
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Get in touch to discuss your project or collaborate on innovative solutions.</p>
+  </div><!-- End Section Title -->
 
-      <!-- Section Title -->
-      <div class="container-fluid section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2 position-relative" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>Addis Ababa, Ethiopia</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Me</h3>
-                <p>+251921512711</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Me</h3>
-                <p>kirubelesayas48@gmail.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <div class="contact-info terminal-style">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
           </div>
-
-          <div class="col-lg-7">
-            <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
+          <div class="terminal-body">
+            <pre class="contact-output">$ whois kirubel
+<span class="contact-field">Email:</span> <a href="mailto:kirubel@example.com">kirubel@example.com</a>
+<span class="contact-field">Phone:</span> +1 123-456-7890
+<span class="contact-field">Location:</span> Remote, Worldwide</pre>
+          </div>
         </div>
+      </div><!-- End Contact Info -->
 
-      </div>
-
-    </section><!-- /Contact Section -->
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            </div>
+            <div class="col-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            </div>
+            <div class="col-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <div class="loading">Processing...</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+              <button type="submit">Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div><!-- End Contact Form -->
+    </div>
+  </div>
+</section><!-- /Contact Section -->
 
   </main>
 
-  <footer id="footer" class="footer">
-
-    <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">KE</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="credits">
-
-        Customized by <a href="#">Kirubel</a>
-      </div>
+<!-- Footer -->
+<footer id="footer" class="footer">
+  <div class="container-fluid p-xxl-5 p-xl-4 p-lg-3 p-md-2">
+    <div class="copyright text-center">
+      <p class="terminal-text">
+        <span class="prompt">$</span> <span class="command">copyright</span> <span class="output">© <span id="current-year"></span> <strong class="px-1 sitename">KE</strong> - All Rights Reserved</span>
+      </p>
     </div>
-
-  </footer>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://twitter.com/yourusername" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://facebook.com/yourusername" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://instagram.com/yourusername" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://linkedin.com/in/yourusername" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <div class="credits">
+      Customized by <a href="#" class="credit-link">Kirubel</a>
+    </div>
+    <div class="back-to-top d-flex justify-content-center mt-3">
+      <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    </div>
+  </div>
+</footer><!-- /Footer -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- Preloader -->
+<!-- <div id="preloader">
+  <div class="terminal-loader">
+    <div class="terminal-header">
+      <span class="terminal-dot red"></span>
+      <span class="terminal-dot yellow"></span>
+      <span class="terminal-dot green"></span>
+    </div>
+    <div class="terminal-body">
+      <pre class="loader-output">$ compiling portfolio...
+<span class="progress-bar">[          ]</span> <span class="progress-percentage">0%</span></pre>
+    </div>
+  </div>
+</div> -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -684,6 +620,7 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
